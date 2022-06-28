@@ -1,0 +1,15 @@
+{
+  "name": "github-actions-dashboard",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/timbset/github-actions-dashboard.git",
+  "author": "timbset <timbset@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node backend/index"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "node-fetch": "^2.6.7"
+  }
+}
