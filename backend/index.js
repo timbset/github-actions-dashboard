@@ -23,11 +23,3 @@ const closeServer = () => {
 
 process.on('SIGINT', closeServer);
 process.on('SIGTERM', closeServer);
-
-// const controller = require('./controller');
-//
-// const main = async () => {
-//   console.log(await controller.getLastRunsDuration('DevExpress', 'DevExtreme'));
-// };
-//
-// main();
