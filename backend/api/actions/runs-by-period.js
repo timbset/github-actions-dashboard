@@ -1,10 +1,7 @@
-const fetch = require('node-fetch');
-
-const { buildActionsApiUrl } = require('../../utils');
+const { getLastRunsDuration } = require('../../controller');
 
 module.exports = async (req, res) => {
-  const { orgName, repoName } = req.params;
-  const response = await fetch(buildActionsApiUrl(`${orgName}/${repoName}`, '/actions/runs'));
-  const data = await response.json();
-  res.json(data);
+  res.json({
+    runs: await getLastRunsDuration(req.params.orgName, req.params.repoName),
+  });
 };
